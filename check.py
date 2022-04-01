@@ -29,8 +29,7 @@ if __name__=="__main__":
     reg=args.re
     file=args.file
     #accepting cmd arguments
-    r=open(reg,'r')
-    for lines in r:
-        rege=re.compile(lines)
-        print(rege)
-        check(file,rege)
+    r=open(reg,'r').read()
+    rege=re.compile(r)
+    print(rege)
+    check(file,rege)
