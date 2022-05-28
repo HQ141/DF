@@ -9,14 +9,17 @@ def check(base,fp):
     changed_list=[]
     nf_list=[]
     file=open(base,'r')
+    all_list.append(fp)
     for lines in file:
+        lines.replace('\n','')
         l=lines.split('\t')
         if(len(l)==1):
             path=l[0].split('/',1)
             if(len(path)>1):
+                all_list.append(fp+'/'+path[1].strip())
                 if not os.path.isdir(fp+'/'+path[1].strip()) :
                     nf_list.append(path[1])
-                    all_list.append(fp+'/'+path[1].strip())
+                    
         else:
             path=l[0].split('/',1)
             all_list.append(fp+'/'+path[1].strip())
@@ -46,8 +49,7 @@ def check(base,fp):
         for f in lsit:
             print(f)
     else:
-        print("No removed Files")
-    
+        print("No New Files")
 
 def new_files(path,all_list,list):
     if(os.path.isdir(path)):
