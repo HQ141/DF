@@ -3,7 +3,7 @@ import socket
 import pwd
 import json
 from anyio import connect_tcp
-
+import fnmatch
 from psycopg2 import connect
 import fabric
 from cairo import HAS_QUARTZ_SURFACE
@@ -14,9 +14,10 @@ with open("instances.json") as jfile:
         Username=jdata[i]['ssh']['username']
         password=jdata[i]['ssh']['password']
         port=jdata[i]['ssh']['port']
-        print(Username)
-        print(password)
-        print(port)
+        if(fnmatch.fnmatch(i,"cluster*")):
+            print(Username)
+            print(password)
+            print(port)
 Username='hq'
 password='qwerty'
 port='22'
