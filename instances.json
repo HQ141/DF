@@ -1,0 +1,42 @@
+{
+  "cluster0.SuccessfulCompany.com": {
+    "ssh": {"port": "2200","username": "root","password": "GrepperHook98"},
+    "http": {"portrange": ["8000","8009"],"config": "/etc/service/*.conf"}
+  },
+  "cluster1.SuccessfulCompany.com": {
+    "ssh": {"port": "2210","username": "root","password": "BridgeDawn11"},
+    "http": {"portrange": ["8010","8019"],"config": "/etc/service/*.conf"}
+  },
+  "cluster2.SuccessfulCompany.com": {
+    "ssh": {"port": "2220","username": "root","password": "DryFire56"},
+    "http": {"portrange": ["8020","8029"],"config": "/etc/service/*.conf"}
+  },
+  "cluster3.SuccessfulCompany.com": {
+    "ssh": {"port": "2230","username": "root","password": "Hero23Oxy"},
+    "http": {"portrange": ["8030","8039"],"config": "/etc/service/*.conf"}
+  },
+  "shard0.SuccessfulCompany.com": {
+    "ssh": {"port": "2240","username": "root","password": "ZeroGround31"},
+    "db": {"port": "5440","username": "root","password": "ZeroGround31","dbname": "pk_sg_lk_bs","logs": "/var/log/db.log"}
+  },
+  "shard1.SuccessfulCompany.com": {
+    "ssh": {"port": "2250","username": "root","password": "BlahBlah76"},
+    "db": {"port": "5450","username": "root","password": "BlahBlah76","dbname": "np_my_bd_bs","logs": "/var/log/db.log"}
+  },
+  "shard2.SuccessfulCompany.com": {
+    "ssh": {"port": "2260","username": "root","password": "TechnicalChap62"},
+    "db": {"port": "5460","username": "root","password": "TechnicalChap62","dbname": "np_my_bd_ud","logs": "/var/log/db.log"}
+  },
+  "shard3.SuccessfulCompany.com": {
+    "ssh": {"port": "2270","username": "root","password": "DontWrestle48"},
+    "db": {"port": "5470","username": "root","password": "DontWrestle48","dbname": "pk_sg_lk_ud","logs": "/var/log/db.log"}
+  },
+  "build.SuccessfulCompany.com": {
+    "ssh": {"port": "2280","username": "root","password": "buildmaster675"},
+    "http": {"port": "8080"}
+  },
+  "nginx.SuccessfulCompany.com": {
+    "ssh": {"port": "2290","username": "root","password": "HAPROXY777"},
+    "http": {"port": "8090"}
+  }
+}
